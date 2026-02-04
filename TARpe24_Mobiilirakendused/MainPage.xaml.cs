@@ -13,6 +13,11 @@
         {
             count++;
 
+            // igakord kui nuppu vajutada lisab 0.1 pildi suurusele juurde
+            BotImage.Scale += 0.1;
+            // igakord kui nuppu vajutada võtab nuppu nähtavust 0,1 võrra vähemaks
+            CounterBtn.Opacity -= 0.1;
+
             if (count >= 10)
             {
                 BotImage.IsVisible = false; // Peidab pildi
@@ -38,13 +43,16 @@
                 CounterBtn.BackgroundColor = rndColor;
             }
 
+            // if operaator mis kontrollib kas count on paarisarv
             if (count % 2 == 0)
             {
+                //lisab nurga raadiusele 5 juurde
                 CounterBtn.CornerRadius += 5;
+                //lisab nupu sisse suurust
+                CounterBtn.Padding += 5;
             }
 
-            BotImage.Scale += 0.1;
-            BotImage.Opacity -= 0.1;
+
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
@@ -57,7 +65,7 @@
             BotImage.IsVisible = true;
             BotImage.Rotation = 0;
             BotImage.Scale = 1;
-            BotImage.Opacity = 1;
+            CounterBtn.Opacity = 1;
 
             if (BotImage.HorizontalOptions == LayoutOptions.Start)
             {
