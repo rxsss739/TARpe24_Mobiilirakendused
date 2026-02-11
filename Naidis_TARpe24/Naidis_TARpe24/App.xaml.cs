@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace TARpe24_Mobiilirakendused
+namespace Naidis_TARpe24
 {
     public partial class App : Application
     {
@@ -17,7 +17,6 @@ namespace TARpe24_Mobiilirakendused
                 BarBackgroundColor = Colors.Blue,
                 BarTextColor = Colors.White
             };
-
             return new Window(navPage);
         }
     }
