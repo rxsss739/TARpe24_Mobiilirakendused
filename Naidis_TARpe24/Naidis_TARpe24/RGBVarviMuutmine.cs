@@ -6,9 +6,11 @@ public class RGBVarviMuutmine : ContentPage
 	Slider redSlider;
 	Slider greenSlider;
 	Slider blueSlider;
+    Stepper stepper;
 	Label redLabel;
 	Label greenLabel;
 	Label blueLabel;
+    Button nupp;
 	AbsoluteLayout al;
 
 	public RGBVarviMuutmine()
@@ -76,7 +78,17 @@ public class RGBVarviMuutmine : ContentPage
         };
         blueSlider.ValueChanged += Slider_ValueChanged;
 
-        Button nupp = new Button
+        stepper = new Stepper
+        {
+            Minimum = 0,
+            Maximum = 90,
+            Value = 0,
+            HorizontalOptions = LayoutOptions.Center,
+            Increment = 5
+        };
+        stepper.ValueChanged += Stepper_ValueChanged;
+        
+        nupp = new Button
         {
             Text = "Genereeri värv",
             FontSize = 18,
@@ -91,7 +103,7 @@ public class RGBVarviMuutmine : ContentPage
             GenerateRandomColor();
         };
 
-        al = new AbsoluteLayout { Children = { bv, redLabel, redSlider, greenLabel, greenSlider, blueLabel, blueSlider, nupp} };
+        al = new AbsoluteLayout { Children = { bv, redLabel, redSlider, greenLabel, greenSlider, blueLabel, blueSlider, stepper, nupp} };
 
 		AbsoluteLayout.SetLayoutBounds(bv, new Rect(0, 0, 1, 0.4));
 		AbsoluteLayout.SetLayoutFlags(bv, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
@@ -114,13 +126,21 @@ public class RGBVarviMuutmine : ContentPage
         AbsoluteLayout.SetLayoutBounds(blueSlider, new Rect(0.5, 0.91, 0.8, 0.15));
         AbsoluteLayout.SetLayoutFlags(blueSlider, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 
-        AbsoluteLayout.SetLayoutBounds(nupp, new Rect(0.5, 0.96, 0.8, 0.15));
+        AbsoluteLayout.SetLayoutBounds(stepper, new Rect(0.5, 0.98, 0.8, 0.15));
+        AbsoluteLayout.SetLayoutFlags(stepper, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
+
+        AbsoluteLayout.SetLayoutBounds(nupp, new Rect(0.5, 1.05, 0.8, 0.15));
         AbsoluteLayout.SetLayoutFlags(nupp, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 
         Content = al;
     }
 
-	private void Slider_ValueChanged(object? sender, ValueChangedEventArgs args)
+    private void Stepper_ValueChanged(object? sender, ValueChangedEventArgs e)
+    {
+        bv.CornerRadius = e.NewValue;
+    }
+
+    private void Slider_ValueChanged(object? sender, ValueChangedEventArgs args)
 	{
         if (sender == redSlider)
         {
