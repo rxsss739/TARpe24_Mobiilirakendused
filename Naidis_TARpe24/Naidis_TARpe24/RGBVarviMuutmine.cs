@@ -1,9 +1,14 @@
+using Microsoft.Maui.Layouts;
+
 namespace Naidis_TARpe24;
 
 public class RGBVarviMuutmine : ContentPage
 {
 	BoxView bv;
-	Slider redSlider;
+    BoxView redBox;
+    BoxView greenBox;
+    BoxView blueBox;
+    Slider redSlider;
 	Slider greenSlider;
 	Slider blueSlider;
     Stepper stepper;
@@ -17,12 +22,39 @@ public class RGBVarviMuutmine : ContentPage
 	{
         bv = new BoxView
         {
-            Color = Color.FromRgb(128, 128, 128),
-            WidthRequest = 9999999,
-            HeightRequest = 400,
+            BackgroundColor = Color.FromRgb(128, 128, 128),
+            WidthRequest = 200,
+            HeightRequest = 200,
             HorizontalOptions = LayoutOptions.Center,
-            BackgroundColor = Color.FromRgba(0, 0, 0, 0),
         };
+        redBox = new BoxView
+        {
+            WidthRequest = 60,
+            HeightRequest = 60,
+            Color = Color.FromRgb(128, 0, 0)
+        };
+
+        greenBox = new BoxView
+        {
+            WidthRequest = 60,
+            HeightRequest = 60,
+            Color = Color.FromRgb(0, 128, 0)
+        };
+
+        blueBox = new BoxView
+        {
+            WidthRequest = 60,
+            HeightRequest = 60,
+            Color = Color.FromRgb(0, 0, 128)
+        };
+
+        HorizontalStackLayout colorBoxesLayout = new HorizontalStackLayout
+        {
+            Spacing = 10,
+            HorizontalOptions = LayoutOptions.Center,
+            Children = { redBox, greenBox, blueBox }
+        };
+
         redSlider = new Slider
 		{
 			Minimum = 1,
@@ -103,10 +135,13 @@ public class RGBVarviMuutmine : ContentPage
             GenerateRandomColor();
         };
 
-        al = new AbsoluteLayout { Children = { bv, redLabel, redSlider, greenLabel, greenSlider, blueLabel, blueSlider, stepper, nupp} };
+        al = new AbsoluteLayout { Children = { bv, colorBoxesLayout, redLabel, redSlider, greenLabel, greenSlider, blueLabel, blueSlider, stepper, nupp } };
 
-		AbsoluteLayout.SetLayoutBounds(bv, new Rect(0, 0, 1, 0.4));
-		AbsoluteLayout.SetLayoutFlags(bv, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
+        AbsoluteLayout.SetLayoutBounds(bv, new Rect(0.5, 0.05, 200, 200));
+        AbsoluteLayout.SetLayoutFlags(bv, AbsoluteLayoutFlags.PositionProportional);
+
+        AbsoluteLayout.SetLayoutBounds(colorBoxesLayout, new Rect(0.26, 0.35, 0.8, 100));
+        AbsoluteLayout.SetLayoutFlags(colorBoxesLayout, AbsoluteLayoutFlags.PositionProportional);
 
         AbsoluteLayout.SetLayoutBounds(redLabel, new Rect(0.5, 0.52, 0.8, 0.1));
         AbsoluteLayout.SetLayoutFlags(redLabel, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
@@ -126,7 +161,7 @@ public class RGBVarviMuutmine : ContentPage
         AbsoluteLayout.SetLayoutBounds(blueSlider, new Rect(0.5, 0.91, 0.8, 0.15));
         AbsoluteLayout.SetLayoutFlags(blueSlider, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 
-        AbsoluteLayout.SetLayoutBounds(stepper, new Rect(0.5, 0.98, 0.8, 0.15));
+        AbsoluteLayout.SetLayoutBounds(stepper, new Rect(0.5, 1.02, 0.8, 0.15));
         AbsoluteLayout.SetLayoutFlags(stepper, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 
         AbsoluteLayout.SetLayoutBounds(nupp, new Rect(0.5, 1.05, 0.8, 0.15));
@@ -137,30 +172,25 @@ public class RGBVarviMuutmine : ContentPage
 
     private void Stepper_ValueChanged(object? sender, ValueChangedEventArgs e)
     {
-        bv.CornerRadius = e.NewValue;
+        bv.CornerRadius = (float)e.NewValue;
     }
 
     private void Slider_ValueChanged(object? sender, ValueChangedEventArgs args)
 	{
-        if (sender == redSlider)
-        {
-            redLabel.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
-        }
-        if (sender == greenSlider)
-        {
-            greenLabel.Text = String.Format("Green = {0:X2}", (int)args.NewValue);
-        }
-        if (sender == blueSlider)
-        {
-            blueLabel.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
-        }
+        int red = (int)redSlider.Value;
+        int green = (int)greenSlider.Value;
+        int blue = (int)blueSlider.Value;
 
-        bv.Color = Color.FromRgb(
-			(int)redSlider.Value,
-			(int)greenSlider.Value,
-			(int)blueSlider.Value
-		);
-	}
+        redLabel.Text = $"Red = {red}";
+        greenLabel.Text = $"Green = {green}";
+        blueLabel.Text = $"Blue = {blue}";
+
+        redBox.Color = Color.FromRgb(red, 0, 0);
+        greenBox.Color = Color.FromRgb(0, green, 0);
+        blueBox.Color = Color.FromRgb(0, 0, blue);
+
+        bv.Color = Color.FromRgb(red, green, blue);
+    }
 
     private void GenerateRandomColor()
     {
