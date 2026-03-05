@@ -13,6 +13,7 @@ namespace Naidis_TARpe24
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Socafe 400.otf", "Socafe400");
                 });
 
 #if DEBUG
