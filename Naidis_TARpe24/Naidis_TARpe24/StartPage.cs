@@ -4,8 +4,8 @@ public class StartPage : ContentPage
 {
 	VerticalStackLayout vst;
 	ScrollView sv;
-	public List<ContentPage> Lehed = new List<ContentPage>() { new TextPage(), new FigurePage(), new ValgusfoorPage(), new Datetime_Page(), new RGBVarviMuutmine(), new Lumememm()};
-	public List<string> LeheNimed = new List<string> { "Tekst", "Kujund", "Valgusfoor", "Datetime", "RGB Värvi Muutmine", "Lumememm" };
+	public List<ContentPage> Lehed = new List<ContentPage>() { new TextPage(), new FigurePage(), new ValgusfoorPage(), new Datetime_Page(), new RGBVarviMuutmine(), new Lumememm(), new PopUpPage()};
+	public List<string> LeheNimed = new List<string> { "Tekst", "Kujund", "Valgusfoor", "Datetime", "RGB Värvi Muutmine", "Lumememm", "Popup teade" };
 
 	public StartPage()
 	{

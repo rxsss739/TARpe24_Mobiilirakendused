@@ -16,7 +16,7 @@ public class Lumememm : ContentPage
         {
             WidthRequest = 40,
             HeightRequest = 25,
-            BackgroundColor = Colors.Orange,
+            BackgroundColor = Colors.DarkGray,
             CornerRadius = 5,
             HasShadow = false,
             Padding = 0
@@ -25,7 +25,7 @@ public class Lumememm : ContentPage
         {
             WidthRequest = 70,
             HeightRequest = 70,
-            BackgroundColor = Colors.White,
+            BackgroundColor = Colors.LightGray,
             CornerRadius = 35,
             HasShadow = false,
             Padding = 0
@@ -34,7 +34,7 @@ public class Lumememm : ContentPage
         {
             WidthRequest = 100,
             HeightRequest = 100,
-            BackgroundColor = Colors.White,
+            BackgroundColor = Colors.LightGray,
             CornerRadius = 50,
             HasShadow = false,
             Padding = 0
@@ -43,7 +43,7 @@ public class Lumememm : ContentPage
         {
             WidthRequest = 130,
             HeightRequest = 130,
-            BackgroundColor = Colors.White,
+            BackgroundColor = Colors.LightGray,
             CornerRadius = 65,
             HasShadow = false,
             Padding = 0
