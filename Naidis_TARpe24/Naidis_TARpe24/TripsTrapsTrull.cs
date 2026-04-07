@@ -196,9 +196,13 @@ public class TripsTrapsTrull : ContentPage
         string choice = await DisplayActionSheetAsync("Kes alustab?", "Tuhista", null, "Mangija X", "Mangija O", "Juhuslik");
 
         if (choice == "Mangija X")
+        {
             ResetBoard(GameLogic.CellState.X);
+        }
         else if (choice == "Mangija O")
+        {
             ResetBoard(GameLogic.CellState.O);
+        }
         else if (choice == "Juhuslik")
         {
             var random = new Random().Next(2) == 0 ? GameLogic.CellState.X : GameLogic.CellState.O;
