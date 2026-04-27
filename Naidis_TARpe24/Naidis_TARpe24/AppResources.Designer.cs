@@ -22,7 +22,7 @@ namespace Naidis_TARpe24 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Naidis_TARpe24 {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Naidis_TARpe24.AppResources", typeof(AppResources).Assembly);
@@ -51,7 +51,7 @@ namespace Naidis_TARpe24 {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Naidis_TARpe24 {
         /// <summary>
         ///   Looks up a localized string similar to Switch to Estonian.
         /// </summary>
-        internal static string KeeleNupp {
+        public static string KeeleNupp {
             get {
                 return ResourceManager.GetString("KeeleNupp", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Naidis_TARpe24 {
         /// <summary>
         ///   Looks up a localized string similar to Created.
         /// </summary>
-        internal static string LoodudPrefix {
+        public static string LoodudPrefix {
             get {
                 return ResourceManager.GetString("LoodudPrefix", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Naidis_TARpe24 {
         /// <summary>
         ///   Looks up a localized string similar to Programming Languages.
         /// </summary>
-        internal static string Pealkiri {
+        public static string Pealkiri {
             get {
                 return ResourceManager.GetString("Pealkiri", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Naidis_TARpe24 {
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        internal static string Sulge {
+        public static string Sulge {
             get {
                 return ResourceManager.GetString("Sulge", resourceCulture);
             }
