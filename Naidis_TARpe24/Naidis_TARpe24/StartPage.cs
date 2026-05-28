@@ -4,8 +4,8 @@ public class StartPage : ContentPage
 {
 	VerticalStackLayout vst;
 	ScrollView sv;
-	public List<ContentPage> Lehed = new List<ContentPage>() { new EuroopaRiigid(), new FigurePage(), new ValgusfoorPage(), new Kontaktandmed(), new RGBVarviMuutmine(), new Lumememm(), new PopUpPage(), new TripsTrapsTrull(), new Galerii()};
-	public List<string> LeheNimed = new List<string> { "Euroopa Riigid", "Kujund", "Valgusfoor", "Kontaktandmed leht", "RGB Värvi Muutmine", "Lumememm", "Popup teade", "Trips Traps Trull", "Galerii" };
+	public List<Page> Lehed = new List<Page>() { new RetseptiraamatPage(), new Yhendamismang(), new EuroopaRiigid(), new FigurePage(), new ValgusfoorPage(), new Kontaktandmed(), new RGBVarviMuutmine(), new Lumememm(), new PopUpPage(), new TripsTrapsTrull(), new Galerii()};
+	public List<string> LeheNimed = new List<string> { "Retseptiraamat", "Ühendamismäng", "Euroopa Riigid", "Kujund", "Valgusfoor", "Kontaktandmed leht", "RGB Värvi Muutmine", "Lumememm", "Popup teade", "Trips Traps Trull", "Galerii" };
 
 	public StartPage()
 	{
