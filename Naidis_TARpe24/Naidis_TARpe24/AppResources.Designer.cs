@@ -61,11 +61,92 @@ namespace Naidis_TARpe24 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aktiivne keel.
+        /// </summary>
+        public static string AktiivneKeel {
+            get {
+                return ResourceManager.GetString("AktiivneKeel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avasta Tallinn.
+        /// </summary>
+        public static string AvastaPealkiri {
+            get {
+                return ResourceManager.GetString("AvastaPealkiri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eemalda.
+        /// </summary>
+        public static string Eemalda {
+            get {
+                return ResourceManager.GetString("Eemalda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Juba lemmikutes!.
+        /// </summary>
+        public static string JubaLemmik {
+            get {
+                return ResourceManager.GetString("JubaLemmik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Switch to Estonian.
         /// </summary>
         public static string KeeleNupp {
             get {
                 return ResourceManager.GetString("KeeleNupp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vali keel:.
+        /// </summary>
+        public static string KeelValik {
+            get {
+                return ResourceManager.GetString("KeelValik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lemmikuks lisatud!.
+        /// </summary>
+        public static string LemmikLisatud {
+            get {
+                return ResourceManager.GetString("LemmikLisatud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minu lemmikud.
+        /// </summary>
+        public static string LemmikudPealkiri {
+            get {
+                return ResourceManager.GetString("LemmikudPealkiri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lemmikuid pole veel. Vajuta kaardile, et lisada!.
+        /// </summary>
+        public static string LemmikudTyhi {
+            get {
+                return ResourceManager.GetString("LemmikudTyhi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lisa lemmikutesse.
+        /// </summary>
+        public static string LisaLemmik {
+            get {
+                return ResourceManager.GetString("LisaLemmik", resourceCulture);
             }
         }
         
@@ -88,11 +169,29 @@ namespace Naidis_TARpe24 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close.
+        ///   Looks up a localized string similar to Seaded.
+        /// </summary>
+        public static string SeadedPealkiri {
+            get {
+                return ResourceManager.GetString("SeadedPealkiri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sulge.
         /// </summary>
         public static string Sulge {
             get {
                 return ResourceManager.GetString("Sulge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tühista.
+        /// </summary>
+        public static string Tyhista {
+            get {
+                return ResourceManager.GetString("Tyhista", resourceCulture);
             }
         }
     }

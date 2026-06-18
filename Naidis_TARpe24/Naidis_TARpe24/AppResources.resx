@@ -129,4 +129,40 @@
   <data name="Sulge" xml:space="preserve">
     <value>Close</value>
   </data>
+	<data name="AvastaPealkiri" xml:space="preserve">
+    <value>Avasta Tallinn</value>
+  </data>
+	<data name="LemmikudPealkiri" xml:space="preserve">
+    <value>Minu lemmikud</value>
+  </data>
+	<data name="SeadedPealkiri" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
+	<data name="KeelValik" xml:space="preserve">
+    <value>Vali keel:</value>
+  </data>
+	<data name="AktiivneKeel" xml:space="preserve">
+    <value>Aktiivne keel</value>
+  </data>
+	<data name="LemmikudTyhi" xml:space="preserve">
+    <value>Lemmikuid pole veel. Vajuta kaardile, et lisada!</value>
+  </data>
+	<data name="LisaLemmik" xml:space="preserve">
+    <value>Lisa lemmikutesse</value>
+  </data>
+	<data name="JubaLemmik" xml:space="preserve">
+    <value>Juba lemmikutes!</value>
+  </data>
+	<data name="LemmikLisatud" xml:space="preserve">
+    <value>Lemmikuks lisatud!</value>
+  </data>
+	<data name="Sulge" xml:space="preserve">
+    <value>Sulge</value>
+  </data>
+	<data name="Eemalda" xml:space="preserve">
+    <value>Eemalda</value>
+  </data>
+	<data name="Tyhista" xml:space="preserve">
+    <value>Tühista</value>
+  </data>
 </root>

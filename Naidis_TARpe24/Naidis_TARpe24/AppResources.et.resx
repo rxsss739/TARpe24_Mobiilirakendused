@@ -129,4 +129,37 @@
   <data name="Sulge" xml:space="preserve">
     <value>Sulge</value>
   </data>
+	<data name="AvastaPealkiri" xml:space="preserve">
+    <value>Discover Tallinn</value>
+  </data>
+	<data name="LemmikudPealkiri" xml:space="preserve">
+    <value>My Favorites</value>
+  </data>
+	<data name="SeadedPealkiri" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+	<data name="KeelValik" xml:space="preserve">
+    <value>Select language:</value>
+  </data>
+	<data name="AktiivneKeel" xml:space="preserve">
+    <value>Active language</value>
+  </data>
+	<data name="LemmikudTyhi" xml:space="preserve">
+    <value>No favorites yet. Tap a card to add!</value>
+  </data>
+	<data name="LisaLemmik" xml:space="preserve">
+    <value>Add to favorites</value>
+  </data>
+	<data name="JubaLemmik" xml:space="preserve">
+    <value>Already in favorites!</value>
+  </data>
+	<data name="LemmikLisatud" xml:space="preserve">
+    <value>Added to favorites!</value>
+  </data>
+	<data name="Eemalda" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+	<data name="Tyhista" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

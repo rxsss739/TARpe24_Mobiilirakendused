@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Arvestustoo.csproj">
+    <Deploy />
+  </Project>
+</Solution>
